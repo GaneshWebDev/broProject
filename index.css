@@ -190,7 +190,7 @@ body{
   }
   
   .active.popup-container {
-    visibility: hidden;
+    display: none;
     opacity: 0;
     top: 10%;
   }
