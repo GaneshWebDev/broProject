@@ -31,7 +31,10 @@ body{
     display: flex;
     width: 100vw;
 }
-
+.active.container {
+    filter: blur(5px) brightness(0.7);
+  }
+ 
 /* buttons styled */
 .btn-cont{
     display: flex;
@@ -100,6 +103,98 @@ body{
     height: 300px;
  }
  
+ /* login styling*/
+ .login-cont{
+    display: flex;
+    width: 29.3%;
+ }
+ .login{
+    display: flex;
+    margin: 15% ;
+    height: 70%;
+    width: 60%;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+ .login h1{
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+ }
+.login form{
+    display: flex;
+    flex-direction: column;
+}
+.login label{
+    font-size: 20px;
+}
+.login button{
+    background-color: blue;
+    color: white;
+    width: 100px;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+}
+/* apply online Styling for screen size less than 600px*/
+  .popup-container  {
+    position:fixed;
+    left: 35%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    margin: 15%;
+    overflow: hidden;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: all 0.7s;
+  }
+  .popup-container h1{
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+ }
+ .popup-container form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.popup-container label{
+    font-size: 20px;
+}
+.popup-container button{
+    background-color: blue;
+    color: white;
+    width: 100px;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+}
+.close-icon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .close-icon:hover {
+    color: orangered;
+  }
+  
+  .active.popup-container {
+    visibility: hidden;
+    opacity: 0;
+    top: 10%;
+  }
+  
  /* login styling*/
  .login-cont{
     display: flex;
@@ -224,4 +319,54 @@ body{
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
      }
+}
+/* apply Styling for screen size less than 600px*/
+@media only screen and (max-width: 600px) {
+
+    .popup-container  {
+        position:fixed;
+        width: 300px;
+        height: 250px;
+        margin: 15%;
+        overflow: hidden;
+        left: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      .popup-container h1{
+        font-size: 20px;
+        text-align: center;
+        color: blue;
+     }
+     .popup-container form{
+        display: flex;
+        padding: 3px;
+        flex-direction: column;
+    }
+    .popup-container label{
+        font-size: 20px;
+    }
+    .popup-container button{
+        background-color: blue;
+        color: white;
+        width: 100px;
+        border: none;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .close-icon {
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+      }
+      
+      .close-icon:hover {
+        color: orangered;
+      }
+      
+      .active.popup-container {
+        visibility: hidden;
+        opacity: 0;
+        top: 10%;
+      }
 }
